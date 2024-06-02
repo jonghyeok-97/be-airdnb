@@ -10,7 +10,7 @@
 | 4    |         |                |
 | 5    |         |                |
 | 6    |         |                |
-| 7    |         |                |
+| 7    |   Soap , Senna      |       [7팀 레포](https://github.com/CodeSquad24-Study/be-airdnb)         |
 | 8    |         |                |
 | 9    |         |                |
 | 10   |         |                |
