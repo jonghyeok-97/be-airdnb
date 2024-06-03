@@ -12,7 +12,7 @@
 | 6    |         |                |
 | 7    |   Soap , Senna      |       [7팀 레포](https://github.com/CodeSquad24-Study/be-airdnb)         |
 | 8    |         |                |
-| 9    |         |                |
+| 9    |  상추, Jayden       | [9팀 레포](https://github.com/codesquad-masters2024-team09-step2/be-airdnb)            |
 | 10   |         |                |
 | 11   |         |                |
 
