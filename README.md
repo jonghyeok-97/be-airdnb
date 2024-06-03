@@ -8,7 +8,7 @@
 | 2    |         |                |
 | 3    |         |                |
 | 4    |         |                |
-| 5    |         |                |
+| 5    |웨이드, 알렉스         |[5팀 레포](https://github.com/codesquad-masters2024-be-airdnb-team05/be-airdnb)                |
 | 6    | 시드, 다오 |[TEAM06 Airdnb](https://github.com/codesquad-masters2024-team6/be-airdnb)|
 | 7    |   Soap , Senna      |       [7팀 레포](https://github.com/CodeSquad24-Study/be-airdnb)         |
 | 8    |         |                |
