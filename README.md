@@ -4,7 +4,7 @@
 
 | team | members | repository URL |
 | ---- | ------- | -------------- |
-| 1    |         |                |
+| 1    | 미르, 에디, 데이| [1팀 레포](https://github.com/codesquad-masters2024-airbnb-team01/be-airdnb)                                                                 |
 | 2    |         |                |
 | 3    |         |                |
 | 4    |         |                |
