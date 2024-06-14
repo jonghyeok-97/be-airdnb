@@ -1,4 +1,4 @@
-package com.airdnb.clone.domain.stay.entity;
+package com.airdnb.clone.domain.common;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
@@ -15,11 +15,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @Embeddable
 @EqualsAndHashCode
-public class StayImage {
+public class Guest {
 
-    @Column(name = "URL")
-    private String url;
-
-    @Column(name = "PLACE")
-    private String place;
+    @Column(name = "GUEST_COUNT")
+    private Integer guestCount;
 }
