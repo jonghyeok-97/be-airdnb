@@ -1,8 +1,9 @@
-package com.airdnb.clone.domain.booking;
+package com.airdnb.clone.domain.booking.controller;
 
-import com.airdnb.clone.domain.booking.request.BookingSaveRequest;
-import com.airdnb.clone.domain.booking.request.BookingUpdateRequest;
-import com.airdnb.clone.domain.booking.response.BookingResponse;
+import com.airdnb.clone.domain.booking.BookingService;
+import com.airdnb.clone.domain.booking.controller.request.BookingSaveRequest;
+import com.airdnb.clone.domain.booking.controller.request.BookingUpdateRequest;
+import com.airdnb.clone.domain.booking.controller.response.BookingResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,7 +24,7 @@ public class BookingController {
 
     @PostMapping
     public BookingResponse create(@Valid @RequestBody BookingSaveRequest request) {
-        return bookingService.create(request.toBuilder(), request.getStayId(), request.getMemberId());
+        return bookingService.create(request);
     }
 
     @GetMapping("/{id}")
@@ -33,7 +34,7 @@ public class BookingController {
 
     @PatchMapping("/{id}")
     public void edit(@PathVariable("id") Long id, @Valid @RequestBody BookingUpdateRequest request) {
-        bookingService.edit(id, request.toGuest());
+        bookingService.edit(id, request.getGuestCount());
     }
 
     @DeleteMapping("/{id}")
