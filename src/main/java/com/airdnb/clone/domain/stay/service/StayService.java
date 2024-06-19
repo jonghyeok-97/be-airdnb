@@ -15,6 +15,7 @@ import com.airdnb.clone.domain.stay.controller.dto.response.edit.LocationEditRes
 import com.airdnb.clone.domain.stay.controller.dto.response.edit.RoomInfoResponse;
 import com.airdnb.clone.domain.stay.controller.dto.response.edit.StatusEditResponse;
 import com.airdnb.clone.domain.stay.controller.dto.response.edit.TypeEditResponse;
+import com.airdnb.clone.domain.stay.entity.Amenity;
 import com.airdnb.clone.domain.stay.entity.AvailableAmenity;
 import com.airdnb.clone.domain.stay.entity.RoomInformation;
 import com.airdnb.clone.domain.stay.entity.Stay;
@@ -62,18 +63,16 @@ public class StayService {
     }
 
     private void saveAvailableAmenities(List<Long> amenityIds, Stay savedStay) {
-        amenityIds.stream()
-                .map(amenityId -> amenityRepository.findById(amenityId).orElseThrow())
-                .forEach(amenity -> {
-                    AvailableAmenity availableAmenity = AvailableAmenity.builder() // 이용 가능 비품 생성
-                            .stay(savedStay)
-                            .amenity(amenity)
-                            .build();
+        List<Amenity> amenities = amenityRepository.findAllById(amenityIds);
+        amenities.forEach(amenity -> {
+            AvailableAmenity availableAmenity = AvailableAmenity.builder() // 이용 가능 비품 생성
+                    .stay(savedStay)
+                    .amenity(amenity)
+                    .build();
 
-                    availableAmenity.setStay(savedStay); // 양방향 연관관계 연결
-
-                    availableAmenityRepository.save(availableAmenity); // 이용 가능 비품 등록
-                });
+            availableAmenity.setStay(savedStay); // 양방향 연관관계 연결
+            availableAmenityRepository.save(availableAmenity); // 이용 가능 비품 등록
+        });
     }
 
     public StayDetailResponse getStay(Long stayId) {
